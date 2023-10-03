@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="PcApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:properties="clr-namespace:PcApp.Resources.Lang">
+
+    <ScrollView>
+        <StackLayout>
+            <VerticalStackLayout
+                Padding="30,0"
+                Spacing="25"
+                VerticalOptions="Center">
+
+                <Label
+                    FontSize="32"
+                    HorizontalOptions="Center"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Hello, World!" />
+
+                <Label
+                    FontSize="18"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                    SemanticProperties.HeadingLevel="Level2"
+                    Text="Welcome to .NET Multi-platform App UI" />
+
+                <Button
+                    x:Name="CounterBtn"
+                    Clicked="OnCounterClicked"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Text="Click me" />
+
+            </VerticalStackLayout>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    FontSize="32"
+                    HorizontalOptions="Center"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="{x:Static properties:Resources.CpuTotalUsage}" />
+                <Label
+                    x:Name="CpuTotalUsage"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    FontSize="32"
+                    HorizontalOptions="Center"
+                    SemanticProperties.HeadingLevel="Level1" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    FontSize="32"
+                    HorizontalOptions="Center"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="{x:Static properties:Resources.CpuPackageTemp}" />
+                <Label
+                    x:Name="CpuPackageTemp"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    FontSize="32"
+                    HorizontalOptions="Center"
+                    SemanticProperties.HeadingLevel="Level1" />
+            </Grid>
+
+            <VerticalStackLayout />
+        </StackLayout>
+
+    </ScrollView>
+
+
+</ContentPage>
