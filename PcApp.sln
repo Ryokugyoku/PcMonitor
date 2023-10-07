@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PcApp", "PcApp.csproj", "{0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PcInfoSerchProject", "..\PcInfoSerchProject\PcInfoSerchProject.csproj", "{60A08B4D-0F4C-4F05-B865-A433442F64B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceDiagn", "..\PerformanceDiagn\PerformanceDiagn.csproj", "{8B3BD977-3F0E-499C-8092-DC3A0577BD5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PerformanceDiagn", "..\PerformanceDiagn\PerformanceDiagn.csproj", "{8B3BD977-3F0E-499C-8092-DC3A0577BD5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
