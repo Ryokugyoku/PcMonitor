@@ -49,7 +49,7 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Label
-                    Grid.Row="0"
+                    Grid.Row="1"
                     Grid.Column="1"
                     FontSize="32"
                     HorizontalOptions="Center"
@@ -57,13 +57,13 @@
                     Text="{x:Static properties:Resources.CpuTotalUsage}" />
                 <Label
                     x:Name="CpuTotalUsage"
-                    Grid.Row="1"
+                    Grid.Row="2"
                     Grid.Column="1"
                     FontSize="32"
                     HorizontalOptions="Center"
                     SemanticProperties.HeadingLevel="Level1" />
                 <Label
-                    Grid.Row="0"
+                    Grid.Row="1"
                     Grid.Column="2"
                     FontSize="32"
                     HorizontalOptions="Center"
@@ -71,7 +71,7 @@
                     Text="{x:Static properties:Resources.CpuPackageTemp}" />
                 <Label
                     x:Name="CpuPackageTemp"
-                    Grid.Row="1"
+                    Grid.Row="2"
                     Grid.Column="2"
                     FontSize="32"
                     HorizontalOptions="Center"

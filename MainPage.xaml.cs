@@ -34,8 +34,9 @@ public partial class MainPage : ContentPage
     {
         MainThread.BeginInvokeOnMainThread(() =>
         {
-            CpuTotalUsage.Text = Session.Cpu.TotalCpuUsage.ToString();
-            CpuPackageTemp.Text = Session.Cpu.PackageTemp.ToString();
+            
+            CpuTotalUsage.Text = GlobalObject.NowCpuData.TotalCpuUsage.ToString();
+            CpuPackageTemp.Text = GlobalObject.NowCpuData.PackageTemp.ToString();
         });
     }
 }
