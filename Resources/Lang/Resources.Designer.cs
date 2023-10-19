@@ -79,11 +79,20 @@ namespace PcApp.Resources.Lang {
         }
         
         /// <summary>
-        ///   PCモニター に類似しているローカライズされた文字列を検索します。
+        ///   モニター に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string Title {
+        public static string Monitor {
             get {
-                return ResourceManager.GetString("Title", resourceCulture);
+                return ResourceManager.GetString("Monitor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   PCスペック に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string PCStatus {
+            get {
+                return ResourceManager.GetString("PCStatus", resourceCulture);
             }
         }
     }

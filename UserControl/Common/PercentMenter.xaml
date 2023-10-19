@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+             x:Class="PcApp.UserControl.Common.PercentMenter">
+    <Grid
+        Grid.Row="1"  
+        MaximumHeightRequest="1000"
+        MaximumWidthRequest="1000"
+        >
+        <Border
+            StrokeThickness="4"
+            StrokeShape="RoundRectangle 40,0,0,40"
+            Background="Black"
+            Padding="16,8"
+            MaximumHeightRequest="300"
+            MaximumWidthRequest="300"
+            >
+            <gauge:SfRadialGauge>
+                <gauge:SfRadialGauge.Axes>
+                    <gauge:RadialAxis Interval="10"
+                             UseRangeColorForAxis="True"
+                             Maximum="100" 
+                          >
+                        <gauge:RadialAxis.Ranges>
+                            <gauge:RadialRange StartValue="0"
+                                  EndValue="60"
+                                  Fill="Green" />
+                            <gauge:RadialRange StartValue="60"
+                                  EndValue="70"
+                                  Fill="Orange" />
+                            <gauge:RadialRange StartValue="70"
+                                  EndValue="100"
+                                  Fill="Red" />
+                        </gauge:RadialAxis.Ranges>
+                        <gauge:RadialAxis.Pointers>
+                            <gauge:NeedlePointer x:Name="MeterPin" />
+                        </gauge:RadialAxis.Pointers>
+                        <gauge:RadialAxis.Annotations>
+                            <gauge:GaugeAnnotation x:Name="annotation"
+                                       DirectionUnit="Angle"
+                                       DirectionValue="90"
+                                       PositionFactor="0.5">
+                                <gauge:GaugeAnnotation.Content>
+                                    <Label x:Name="MeterValue"
+                                   FontSize="25"
+                                   FontAttributes="Bold" 
+                                       TextColor="White"/>
+                                </gauge:GaugeAnnotation.Content>
+                            </gauge:GaugeAnnotation>
+                        </gauge:RadialAxis.Annotations>
+                    </gauge:RadialAxis>
+                </gauge:SfRadialGauge.Axes>
+            </gauge:SfRadialGauge>
+        </Border>
+    </Grid>
+</ContentView>

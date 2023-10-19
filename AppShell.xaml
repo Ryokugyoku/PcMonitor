@@ -4,12 +4,17 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:PcApp"
+    xmlns:sublocal="clr-namespace:PcApp.Page"
     xmlns:properties="clr-namespace:PcApp.Resources.Lang"
-    Shell.FlyoutBehavior="Disabled">
+    Shell.FlyoutBehavior="Flyout">
+
 
     <ShellContent
-        Title="{x:Static properties:Resources.Title}"
+        Title="{x:Static properties:Resources.Monitor}"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
-
+    <ShellContent
+        Title="{x:Static properties:Resources.PCStatus}"
+        ContentTemplate="{DataTemplate sublocal:PcStatus}"
+        Route="Page.PcStatus"/>
 </Shell>

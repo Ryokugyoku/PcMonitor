@@ -5,83 +5,32 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:properties="clr-namespace:PcApp.Resources.Lang">
 
-    <ScrollView>
-        <StackLayout>
-            <VerticalStackLayout
-                Padding="30,0"
-                Spacing="25"
-                VerticalOptions="Center">
 
-                <Label
-                    FontSize="32"
-                    HorizontalOptions="Center"
-                    SemanticProperties.HeadingLevel="Level1"
-                    Text="Hello, World!" />
+    <FlexLayout Direction="Column">
 
-                <Label
-                    FontSize="18"
-                    HorizontalOptions="Center"
-                    SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                    SemanticProperties.HeadingLevel="Level2"
-                    Text="Welcome to .NET Multi-platform App UI" />
+        <!-- Header -->
+        <Label Text="HEADER"
+               FontSize="18"
+               BackgroundColor="Aqua"
+               HorizontalTextAlignment="Center" />
 
-                <Button
-                    x:Name="CounterBtn"
-                    Clicked="OnCounterClicked"
-                    HorizontalOptions="Center"
-                    SemanticProperties.Hint="Counts the number of times you click"
-                    Text="Click me" />
+        <!-- Body -->
+        <FlexLayout FlexLayout.Grow="1">
 
-            </VerticalStackLayout>
+            <!-- Content -->
+            <Grid
+                x:Name="Content"/>
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-                <Label
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    FontSize="32"
-                    HorizontalOptions="Center"
-                    SemanticProperties.HeadingLevel="Level1"
-                    Text="{x:Static properties:Resources.CpuTotalUsage}" />
-                <Label
-                    x:Name="CpuTotalUsage"
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    FontSize="32"
-                    HorizontalOptions="Center"
-                    SemanticProperties.HeadingLevel="Level1" />
-                <Label
-                    Grid.Row="1"
-                    Grid.Column="2"
-                    FontSize="32"
-                    HorizontalOptions="Center"
-                    SemanticProperties.HeadingLevel="Level1"
-                    Text="{x:Static properties:Resources.CpuPackageTemp}" />
-                <Label
-                    x:Name="CpuPackageTemp"
-                    Grid.Row="2"
-                    Grid.Column="2"
-                    FontSize="32"
-                    HorizontalOptions="Center"
-                    SemanticProperties.HeadingLevel="Level1" />
-            </Grid>
+            <!-- Aside items -->
+            <BoxView FlexLayout.Basis="50"
+                     Color="Green" />
 
-            <VerticalStackLayout />
-        </StackLayout>
+        </FlexLayout>
 
-    </ScrollView>
-
-
+        <!-- Footer -->
+        <Label Text="FOOTER"
+               FontSize="18"
+               BackgroundColor="Pink"
+               HorizontalTextAlignment="Center" />
+    </FlexLayout>
 </ContentPage>

@@ -123,7 +123,10 @@
   <data name="CpuTotalUsage" xml:space="preserve">
     <value>CPU使用率(全体)</value>
   </data>
-  <data name="Title" xml:space="preserve">
-    <value>PCモニター</value>
+  <data name="Monitor" xml:space="preserve">
+    <value>モニター</value>
+  </data>
+  <data name="PCStatus" xml:space="preserve">
+    <value>PCスペック</value>
   </data>
 </root>
