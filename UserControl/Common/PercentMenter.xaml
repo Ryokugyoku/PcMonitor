@@ -3,12 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
              x:Class="PcApp.UserControl.Common.PercentMenter">
-    <Grid
-        Grid.Row="1"  
-        MaximumHeightRequest="1000"
-        MaximumWidthRequest="1000"
-        >
-        <Border
+
+    <Border
             StrokeThickness="4"
             StrokeShape="RoundRectangle 40,0,0,40"
             Background="Black"
@@ -16,7 +12,16 @@
             MaximumHeightRequest="300"
             MaximumWidthRequest="300"
             >
-            <gauge:SfRadialGauge>
+        <Grid
+        MaximumHeightRequest="1000"
+        MaximumWidthRequest="1000"
+        >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="250"/>
+        </Grid.RowDefinitions>
+            <Label Grid.Row="0" HorizontalOptions="Center" x:Name="ItemName"/>
+            <gauge:SfRadialGauge Grid.Row="1">
                 <gauge:SfRadialGauge.Axes>
                     <gauge:RadialAxis Interval="10"
                              UseRangeColorForAxis="True"
@@ -52,6 +57,6 @@
                     </gauge:RadialAxis>
                 </gauge:SfRadialGauge.Axes>
             </gauge:SfRadialGauge>
-        </Border>
-    </Grid>
+        </Grid>
+    </Border>
 </ContentView>

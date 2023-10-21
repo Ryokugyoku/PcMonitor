@@ -4,8 +4,15 @@
              x:Class="PcApp.UserControl.MainBody.Index"
              xmlns:properties="clr-namespace:PcApp.Resources.Lang">
     <FlexLayout 
-            Direction="Column">
-            <Grid x:Name="Meter"/>
+        JustifyContent="SpaceEvenly"
+        
+        Direction="Row">
+        <Grid
+            HorizontalOptions="Center"
+            x:Name="Meter"/>
+        <Grid
+            HorizontalOptions="Center"
+            x:Name="GpuMeter"/>
     </FlexLayout>
 
 </ContentView>

@@ -1,6 +1,6 @@
+
 using PcApp.src.Enum;
 using PcInfoSerchProject;
-using System.Diagnostics.Metrics;
 using System.Timers;
 
 namespace PcApp.UserControl.Common;
@@ -28,6 +28,7 @@ public partial class PercentMenter : ContentView
 
     public PercentMenter(HardwareType type) : this()
     {
+
         htype = type;
     }
 
@@ -43,17 +44,24 @@ public partial class PercentMenter : ContentView
     /// <param name="e"></param>
     private void OnTimedEvent(Object source, ElapsedEventArgs e)
     {
+        int value = 0;
         MainThread.BeginInvokeOnMainThread(() =>
         {
             switch (htype)
             {
                 case HardwareType.Cpu:
-                    MeterValue.Text = GlobalObject.NowCpuData.TotalCpuUsage.ToString();
-                    MeterPin.Value = GlobalObject.NowCpuData.TotalCpuUsage;
+                    ItemName.Text = GlobalObject.CpuName;
+                    value = (int)Math.Round(GlobalObject.NowCpuData.TotalCpuUsage);
+                    MeterPin.Value = value;
+                    MeterValue.Text = value.ToString()+"%";
+                   
                     break;
 
                 case HardwareType.NvidiaGpu:
-
+                    ItemName.Text = GlobalObject.GpuName;
+                    value = (int)Math.Round(GlobalObject.NowGpuData.TotalGpuUsage);
+                    MeterPin.Value = value;
+                    MeterValue.Text = value.ToString() + "%";
                     break;
 
                 case HardwareType.AmdGpu:
@@ -62,4 +70,5 @@ public partial class PercentMenter : ContentView
             }
         });
     }
+
 }

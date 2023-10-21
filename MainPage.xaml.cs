@@ -7,7 +7,7 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
         us.MainBody.Index index = new();
 		us.Common.SideBar sidebar = new();
-		Content.Add(index);
+        Content.Add(index);
 		//SideBar.Add(sidebar);
     }   
 }

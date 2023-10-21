@@ -12,5 +12,6 @@ public partial class Index : ContentView
 		InitializeComponent();
 
         Meter.Add(new PercentMenter(src.Enum.HardwareType.Cpu));
+        GpuMeter.Add(new PercentMenter(src.Enum.HardwareType.NvidiaGpu));
     }
 }
